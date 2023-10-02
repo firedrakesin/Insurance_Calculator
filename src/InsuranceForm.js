@@ -87,7 +87,6 @@ const InsuranceForm = () => {
             <label>
               Sum Insured:
               <select value={sumInsured} onChange={(e) => setSumInsured(e.target.value)}>
-                <option value="500000">500,000</option>
                 <option value="700000">700,000</option>
                 <option value="1000000">1000,000</option>
                 <option value="7500000">7500,000</option>
