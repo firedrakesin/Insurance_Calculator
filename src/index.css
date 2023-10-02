@@ -1,13 +1,193 @@
-body {
+/* Reset default margin and padding for all elements */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  justify-content: space-between; /* Place the child elements with space in between */
+  align-items: flex-start; /* Align items at the top */
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 300px;
+  margin-bottom: 80px;
+  width: 900px; /* Adjust the total width as needed */
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.f {
+  flex: 0.8; /* Expand to take available space */
+  padding: 40px; /* Adjust padding as needed */
+}
+
+.gif-container {
+  flex: 1; /* Expand to take available space */
+  display: flex;
+  justify-content: flex-start; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.gif {
+  margin-top: 280px;
+  max-width: 100%; /* Limit the width of the GIF */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.pp{
+  margin-top: -180px;
+  margin-left: -480px;
+}
+
+
+/* Apply styles to labels and inputs */
+label {
+  display: block; 
+  margin: 4px;
+  font-weight: bold; 
+  text-align: left;
+}
+
+input,
+select {
+  width: 100%; 
+  padding: 8px; 
+  margin-top: 8px;
+  margin-bottom: 15px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+}
+ 
+/* Style the "Calculate Premium" button */
+.cal1 {
+  background-color: rgb(9, 174, 240); /* Blue color for Calculate Premium button */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for button size */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Add cursor pointer on hover */
+  width: auto;
+}
+
+/* Style the "Add to Cart" button */
+.cal2 {
+  background-color: rgb(4, 154, 4); 
+  margin: 10px;
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for button size */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Add cursor pointer on hover */
+  width: auto;
+}
+
+/* Style the heading */
+h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+/* Style the Premium display */
+div.Premium {
+  text-align: justify; /* Center the Premium display */
+  font-weight: bold; /* Make the Premium text bold */
+}
+
+.image {
+  position: relative;
+  margin-top: -100px;
+  margin-left: 44px;
+  margin-bottom: -20px;
+  left: 30px;
+  border-color: rgb(11, 1, 1);
+}
+
+
+.para{
+  margin: 8px;
+  text-align: left;
+  color: #a3a2a2;
+}
+
+/* .para2{
+  margin-top: 300px;
+  justify-content: space-around;
+} */
+
+.data_tab{
+  margin: 20px;
+  margin-left: 300px;
+  
+}
+
+/* Checkout Page Styles */
+
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.amount {
+  color: #007bff; 
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.payment-method {
+  display: flex;
+  align-items: left;
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.pay-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.pay-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
