@@ -45,10 +45,8 @@ const InsuranceForm = () => {
   };
   
 
-  const addToCart = () => {
-    // Implement logic to add selected insurance to the cart
-    // Redirect to the checkout page
-  };
+  // const addToCart = () => {
+  // };
 
   const renderAdultFields = () => {
     const adultFields = [];
@@ -78,7 +76,7 @@ const InsuranceForm = () => {
   return (
     <>
     
-      <img src={imgfornow} alt="Your Image" className="image" />
+      <img src={imgfornow} alt="ins" className="image" />
       {/* <div style={{ display: "inline-block" }} className='f'>
       <img src={insurance} alt="Your Image" className="gif"  style={{display: "inline-block"}}/> */}
     <div className="container">
@@ -143,7 +141,7 @@ const InsuranceForm = () => {
         </div>
         </div>
         <div className="gif-container">
-        <img src={insurance} alt="Your Image" className="gif" />
+        <img src={insurance} alt="gifff" className="gif" />
         {showPremium && (
           <h2>
             <pre className='pp'>
