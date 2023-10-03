@@ -191,3 +191,23 @@ input[type="radio"] {
 .pay-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
+.home-button {
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #f32ee2; /* Border color can be customized */
+  border-radius: 5px;
+  background-color: #7a0677; /* Background color can be customized */
+  color: #fff; /* Text color can be customized */
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 150px;
+}
+
+.home-button i {
+  margin-right: 5px; /* Adjust the space between icon and text */
+}
+
+

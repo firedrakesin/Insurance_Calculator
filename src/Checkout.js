@@ -8,7 +8,9 @@ const Checkout = ({ amount, setGlobal }) => {
   
   return (
     <> 
-    <button onClick={back}>Home</button>
+    <div className="home-button" onClick={back}>
+        <i className="fas fa-home"></i> Home
+      </div>
     <div className="checkout-container">
       <h2>Checkout</h2>
       <div className="total-amount">
