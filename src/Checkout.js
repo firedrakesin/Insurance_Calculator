@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Checkout = ({ responsedata }) => {
-  const totalAmount = responsedata?.total || 0;
+const Checkout = ({ amount }) => {
 
   return (
+    <>
+    <h1>Home</h1>
     <div className="checkout-container">
       <h2>Checkout</h2>
       <div className="total-amount">
         <p>Premium Amount to Pay:</p>
-        <p className="amount">{totalAmount} INR</p>
+        <p className="amount">{amount} INR</p>
       </div>
       <div className="payment-options">
         <h3>Payment Options:</h3>
@@ -23,6 +24,7 @@ const Checkout = ({ responsedata }) => {
       </div>
       <button className="pay-button">Pay Now</button>
     </div>
+    </>
   );
 };
 

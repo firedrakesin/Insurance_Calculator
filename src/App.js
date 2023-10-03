@@ -1,22 +1,28 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import InsuranceForm from './InsuranceForm';
 import Checkout from './Checkout';
 
 
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
 function App() {
+
+  const [ global,setGlobal ] = useState(0) 
+  const [ amount,setAmount ] = useState(0) 
+
+
   return (
-    <Router>
+
       <div>
-        <Routes>
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/" element={<InsuranceForm />} />
-        </Routes>
+
+      {global === 0 ? (
+        <InsuranceForm setGlobal={setGlobal} setAmount={setAmount} />
+      ) : (
+        <Checkout amount={amount} />
+      )}
+
+
       </div>
-    </Router>
+
   );
 }
 
