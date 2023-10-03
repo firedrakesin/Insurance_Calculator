@@ -17,7 +17,7 @@ function App() {
       {global === 0 ? (
         <InsuranceForm setGlobal={setGlobal} setAmount={setAmount} />
       ) : (
-        <Checkout amount={amount} />
+        <Checkout amount={amount} setGlobal={setGlobal} />
       )}
 
 

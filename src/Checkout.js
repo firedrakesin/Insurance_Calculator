@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Checkout = ({ amount }) => {
+const Checkout = ({ amount, setGlobal }) => {
 
+  const back = () => {
+    setGlobal(0);
+  }
+  
   return (
-    <>
-    <h1>Home</h1>
+    <> 
+    <button onClick={back}>Home</button>
     <div className="checkout-container">
       <h2>Checkout</h2>
       <div className="total-amount">
