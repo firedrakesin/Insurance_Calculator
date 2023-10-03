@@ -8,6 +8,7 @@ function App() {
 
   const [ global,setGlobal ] = useState(0) 
   const [ amount,setAmount ] = useState(0) 
+  const [ response,setresponse ] = useState(0) 
 
 
   return (
@@ -15,9 +16,9 @@ function App() {
       <div>
 
       {global === 0 ? (
-        <InsuranceForm setGlobal={setGlobal} setAmount={setAmount} />
+        <InsuranceForm setGlobal={setGlobal} setAmount={setAmount}  setresponse={setresponse}/>
       ) : (
-        <Checkout amount={amount} setGlobal={setGlobal} />
+        <Checkout amount={amount} setGlobal={setGlobal} response={response} />
       )}
 
 

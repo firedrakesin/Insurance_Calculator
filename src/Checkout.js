@@ -1,6 +1,7 @@
 import React from 'react';
+import Table from './Table';
 
-const Checkout = ({ amount, setGlobal }) => {
+const Checkout = ({ amount, setGlobal, response }) => {
 
   const back = () => {
     setGlobal(0);
@@ -10,6 +11,10 @@ const Checkout = ({ amount, setGlobal }) => {
     <> 
     <div className="home-button" onClick={back}>
         <i className="fas fa-home"></i> Home
+      </div>
+      <div className="table-container">
+        <h3>Details for Adults and Children</h3>
+        <Table response={response} />
       </div>
     <div className="checkout-container">
       <h2>Checkout</h2>

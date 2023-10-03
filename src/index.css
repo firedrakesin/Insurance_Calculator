@@ -9,8 +9,8 @@
   display: flex;
   justify-content: space-between; /* Place the child elements with space in between */
   align-items: flex-start; /* Align items at the top */
-  padding: 10px;
-  margin-top: 30px;
+  padding: 8px;
+  margin-top: 20px;
   margin-left: 300px;
   margin-bottom: 80px;
   width: 900px; /* Adjust the total width as needed */
@@ -55,7 +55,7 @@ input,
 select {
   width: 100%; 
   padding: 8px; 
-  margin-top: 8px;
+  margin-top: 2px;
   margin-bottom: 15px; 
   border: 1px solid #ccc; 
   border-radius: 8px; 
@@ -87,7 +87,7 @@ select {
 /* Style the heading */
 h2 {
   text-align: center; /* Center the heading */
-  margin-bottom: 20px; /* Add spacing below the heading */
+  margin-bottom: 10px; /* Add spacing below the heading */
 }
 
 /* Style the Premium display */
@@ -98,7 +98,7 @@ div.Premium {
 
 .image {
   position: relative;
-  margin-top: -100px;
+  margin-top: -110px;
   margin-left: 44px;
   margin-bottom: -20px;
   left: 30px;
@@ -160,7 +160,7 @@ h2 {
 }
 
 .payment-options {
-  display: flex;
+  display: flexbox ;
   flex-direction: column;
   align-items: left;
   width: 100%;
@@ -168,9 +168,9 @@ h2 {
 }
 
 .payment-method {
-  display: flex;
+  display: flexbox;
   align-items: left;
-  margin-right: 10px;
+  
 }
 
 input[type="radio"] {
@@ -178,7 +178,7 @@ input[type="radio"] {
 }
 
 .pay-button {
-  background-color: #007bff;
+  background-color: #0bce56;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -208,6 +208,23 @@ input[type="radio"] {
 
 .home-button i {
   margin-right: 5px; /* Adjust the space between icon and text */
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 8px;
+  text-align: left;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.table-container {
+  margin-top: 20px;
 }
 
 

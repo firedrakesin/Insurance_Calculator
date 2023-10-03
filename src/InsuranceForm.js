@@ -2,7 +2,7 @@ import React, { useState} from 'react'
 import imgfornow from "./Image/imgfornow.png"
 import insurance from "./Image/insurance.gif"
 
-const InsuranceForm = ({setGlobal,setAmount}) => {
+const InsuranceForm = ({setGlobal,setAmount,setresponse}) => {
 
   const [age, setAge] = useState([]);
   const [sumInsured, setSumInsured] = useState(0);
@@ -12,7 +12,6 @@ const InsuranceForm = ({setGlobal,setAmount}) => {
   const [numChildren, setNumChildren] = useState(0);
   const [responsedata, setresponsedata] = useState('');
   const [showPremium, setShowPremium] = useState(false);
-
   const [fetching, setFetching] = useState(false);
 
   const calculatePremium = () => {
@@ -25,10 +24,10 @@ const InsuranceForm = ({setGlobal,setAmount}) => {
       numChildren,
     };
 
-
     setFetching(true);
     if (!fetching) {
-      fetch('https://liberty-dev.inspektlabs.com/get_lib_data', {
+       fetch('https://liberty-dev.inspektlabs.com/get_lib_data', {
+      //  fetch('http://127.0.0.1:5005/get_lib_data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,22 +36,18 @@ const InsuranceForm = ({setGlobal,setAmount}) => {
       })
         .then((response) => response.json())
         .then((data) => {
-
+          setresponse(data)
           setresponsedata(data.total_cost);
           setAmount(data.total_cost);
           setShowPremium(true);
           setFetching(false);
-
         })
         .catch((error) => {
           console.error('Error:', error);
           setFetching(false); 
         });
     }
-
-    
   };
-
 
   const cart =() => {
     setGlobal(1)
@@ -84,11 +79,8 @@ const InsuranceForm = ({setGlobal,setAmount}) => {
     setAge(updatedAge);
   };
 
-
-
   return (
     <>
-    
     <img src={imgfornow} alt="no pic found" className="image" />
 
     <div className="container">
@@ -115,7 +107,6 @@ const InsuranceForm = ({setGlobal,setAmount}) => {
               </select>
             </label>
 
-
             <label>
               Tenure:
               <select value={tenure} onChange={(e) => setTenure(e.target.value)}>
@@ -135,8 +126,8 @@ const InsuranceForm = ({setGlobal,setAmount}) => {
               />
 
             </label>
-            {renderAdultFields()}
 
+            {renderAdultFields()}
 
             <label>
               Number of Children:
@@ -157,7 +148,6 @@ const InsuranceForm = ({setGlobal,setAmount}) => {
             <button type="button" className="cal2" onClick={cart}>
               Go to Cart
             </button>
-
 
           </form>
         </div>
