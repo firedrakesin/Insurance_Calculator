@@ -4,11 +4,12 @@ import InsuranceForm from './InsuranceForm';
 import Checkout from './Checkout';
 
 
+
 function App() {
 
   const [ global,setGlobal ] = useState(0) 
   const [ amount,setAmount ] = useState(0) 
-  const [ response,setresponse ] = useState(0) 
+  const [ response,setresponse ] = useState({}) 
 
 
   return (

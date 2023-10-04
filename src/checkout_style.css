@@ -1,0 +1,96 @@
+/* external-styles.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .box {
+    width: 400px;
+    padding: 20px;
+    background: #ecf4ed;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-button {
+    cursor: pointer;
+    background: #325d39;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .home-button i {
+    margin-right: 5px;
+  }
+  
+  .title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .title h3 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #05751b;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .checkout {
+    width: 70%;
+  }
+  
+  .checkout h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .amount-info {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .amount-info p {
+    font-size: 1.2rem;
+  }
+  
+  .amount-info .amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .payment-options {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .payment-options h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .payment-method {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .pay-button {
+    background: #12c438;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    display: block;
+    text-align: center; 
+    margin: 0 auto;
+  }
+  
